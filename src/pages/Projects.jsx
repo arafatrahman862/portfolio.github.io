@@ -5,7 +5,7 @@ import '../pages/Projects.css'
 
 const Projects = () => {
     return (
-        <div className='min-h-screen ' data-aos="zoom-in">
+        <div className='min-h-screen '  data-aos="zoom-in">
             <Helmet><title>Portfolio | Projects</title></Helmet>
             <p className='text-4xl pb-6 text-center text-black'>Projects</p>
             <div className='md:flex  md:justify-center md:items-center m-0 px-2 pb-36'>

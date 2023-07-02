@@ -41,7 +41,7 @@ const Home = () => {
                         <a href="https://github.com/arafatrahman862"><FaGithub></FaGithub></a>
                     </div>
                 </div>
-                <div className='md:ml-28 md:mt-20  ml-16 '  data-aos="fade-left">
+                <div className='md:ml-28 md:mt-20  ml-16 '  data-aos="fade-left" >
                     <Lottie animationData={circleAnimation} loop={true} className='z-1 relative md:w-[60%] w-[70%] ' />
                     <img className='rounded-full bg-cover  md:w-[55%] w-[65%] md:-top-[245px] -top-[205px] md:-right-3 -right-2 relative z-10' src={picture} alt="" />
                 </div>

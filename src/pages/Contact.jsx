@@ -31,7 +31,7 @@ const Contact = () => {
 
     }
     return (
-        <div className='h-screen text-black' data-aos="zoom-in-up">
+        <div className='h-screen text-black'  data-aos="zoom-in-up">
             <Helmet><title>Portfolio | Contact</title></Helmet>
             <p className='text-center text-purple-600 text-3xl py-8'>
                 Get in Touch
