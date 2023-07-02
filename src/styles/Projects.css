@@ -16,16 +16,16 @@ gap: 15px;
 }
 
 .container .box.box1{
-background: url(yoku.jpg);
+background: url(../../src/assets/yoku.jpg);
 background-size: cover;
 
 }
 .container .box.box2{
-background: url(toy.png);
+background: url(../../src/assets/toy.jpg);
 background-size: cover;
 }
 .container .box.box3{
-background: url(chef.png);
+background: url(../../src/assets/chef.jpg);
 background-size: cover;
 }
 .container .box:hover{

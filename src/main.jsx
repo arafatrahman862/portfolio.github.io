@@ -11,7 +11,7 @@ import Skills from './pages/Skills.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Contact from './pages/Contact.jsx';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import {  HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import '../pages/Projects.css'
+
+import '../styles/Projects.css'
 
 const Projects = () => {
     return (
@@ -12,6 +13,7 @@ const Projects = () => {
                 <div className='container'>
 
                     <div className='box box1 ' >
+                        
                         <div className='sub-container'>
 
                             <p>Technologies: ReactJs, React Router, JavaScript, Tailwind CSS, Node.js, ExpressJs, MongoDB, Firebase, Stripe.js.</p>
