@@ -31,12 +31,12 @@ const Contact = () => {
 
     }
     return (
-        <div className='h-screen text-black'  data-aos="zoom-in-up">
+        <div className='md:h-screen text-black '  data-aos="zoom-in-up">
             <Helmet><title>Portfolio | Contact</title></Helmet>
             <p className='text-center text-purple-600 text-3xl py-8'>
                 Get in Touch
             </p>
-            <div className='md:flex md:flex-row  gap-2'>
+            <div className='md:flex md:flex-row  gap-2 pb-20'>
 
                 <div className='w-full'>
                     <Lottie className='md:w-[80%] w-full ' animationData={contact} loop={true} />

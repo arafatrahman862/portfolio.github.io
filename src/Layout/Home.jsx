@@ -9,7 +9,7 @@ import { FaLinkedin, FaFacebook, FaGithub } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <div className='h-full w-screen '>
+        <div className='md:h-screen w-screen  '>
             <Helmet><title>Portfolio | Home</title></Helmet>
             <div className='md:flex md:flex-row flex flex-col-reverse pb-12  md:mt-12 mt-8 text-black'>
                 <div className='md:w-full w-[80%] md:mt-20 ' data-aos="fade-right">
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
                 <div className='md:ml-28 md:mt-20  ml-16 '  data-aos="fade-left" >
                     <Lottie animationData={circleAnimation} loop={true} className='z-1 relative md:w-[60%] w-[70%] ' />
-                    <img className='rounded-full bg-cover  md:w-[55%] w-[65%] md:-top-[210px] -top-[205px] md:-right-2 -right-2 relative z-10' src={picture} alt="" />
+                    <img className='rounded-full bg-cover  md:w-[55%] w-[65%] md:-top-[210px]  -top-[228px] md:-right-2 -right-2 relative z-10' src={picture} alt="" />
                 </div>
             </div>
 

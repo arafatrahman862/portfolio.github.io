@@ -6,11 +6,11 @@ import '../styles/Projects.css'
 
 const Projects = () => {
     return (
-        <div className='min-h-screen '  data-aos="zoom-in">
+        <div className='md:h-screen pb-12'  data-aos="zoom-in">
             <Helmet><title>Portfolio | Projects</title></Helmet>
             <p className='text-4xl pb-6 text-center text-black'>Projects</p>
             <div className='md:flex  md:justify-center md:items-center m-0 px-2 pb-36'>
-                <div className='container'>
+                <div className='container '>
 
                     <div className='box box1 ' >
                         
@@ -18,12 +18,12 @@ const Projects = () => {
 
                             <p>Technologies: ReactJs, React Router, JavaScript, Tailwind CSS, Node.js, ExpressJs, MongoDB, Firebase, Stripe.js.</p>
                             <div className='flex gap-4 justify-center items-center pt-2'>
-                                <button className='btn btn-outline btn-success '>
+                                <button className='btn md:btn-outline md:btn-success btn-outline btn-success'>
                                     <a href="https://github.com/arafatrahman862/Yoku-Client">GITHUB</a>
                                     
                                 </button>
                                 <button className='btn btn-outline btn-success '>
-                                    <a href="https://assignment12-34f50.web.app/">LIVE SITE</a>
+                                    <a href="https://6531644105546c4bf4462df8--vermillion-paprenjak-5f3c27.netlify.app/">LIVE SITE</a>
                                     
                                 </button>
                             </div>

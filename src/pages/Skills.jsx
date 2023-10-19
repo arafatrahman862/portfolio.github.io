@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 
 const Skills = () => {
     return (
-        <div className='md:flex gap-12 mt-12 text-black h-screen'  data-aos="fade-right">
+        <div className='md:flex gap-12 mt-12 text-black md:h-screen pb-6'  data-aos="fade-right">
             <Helmet><title>Portfolio | Skills</title></Helmet>
-            <div className='md:w-1/2'>
+            <div className='md:w-1/2 '>
 <p className='text-center text-3xl'>Frontend:</p>
 <p className='mt-4'>HTML 5</p>
 <div className='flex mt-2'>

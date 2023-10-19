@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet';
 
 const About = () => {
     return (
-        <div className='h-screen text-black pt-8'>
+        <div className='md:h-screen text-black pt-8'>
             <Helmet><title>Portfolio | About</title></Helmet>
             <p className='text-4xl text-center'>About <span className='text-purple-600'>Me</span></p>
-            <div className='grid md:grid-cols-4 gap-4 md:mt-12 mt-6 pb-2'  data-aos="fade-up"
+            <div className='grid md:grid-cols-4 gap-4 md:mt-12 mt-6 pb-12'  data-aos="fade-up"
                 data-aos-anchor-placement="top-center">
                 <div className='space-y-3'>
                     <p>First Name: Arafat</p>

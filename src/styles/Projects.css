@@ -8,11 +8,12 @@ gap: 15px;
 
 .container .box{
     width: 580px;
-    height: 300px;
+    height: 400px;
     background: #000;
     transition: ease-in-out 5s;
     background-position: top;
     border-radius: 10px;
+    
 }
 
 .container .box.box1{
@@ -34,10 +35,11 @@ background-size: cover;
 .sub-container{
     margin-top: 300px;
     text-align: center;
-    background-color: rgb(124, 27, 43);
+    background-color: rgb(76, 11, 160);
     border-radius: 10px;
     color: rgb(243, 202, 22);
     padding: 10px;
+    height: 150px;
 }
 
 @media only screen and (max-width: 600px){
@@ -48,36 +50,45 @@ background-size: cover;
        
     }
     .container .box{
-        width: fit-content;
+       
         height: 300px;
-        transition: ease-in-out 5s;
+        transition: ease-in-out 7s;
         background-position: top;
+        width: 330px;
+       margin: 20px 0px;
+        background: #000;
+     
+        border-radius: 10px;
+        
+       
     }
-    .sub-container{
+    /* .sub-container{
         width: fit-content;
         padding: 5px;
-    }
-    .btn{
-        width: fit-content;
-        padding: 0;
-        padding: 1px 4px;
-      
-    }
+        height: 180px;
+        
+    } */
+    /* .btn:hover{
+        
+      background-color: rgb(255, 0, 170);
+    } */
+   
     
-.container .box.box1{
-    background: url(yoku.jpg);
+/* .container .box.box1{
+    
     background-size: cover;
+    
     
     }
     .container .box.box2{
-    background: url(toy.png);
+    
     background-size: cover;
     }
     .container .box.box3{
-    background: url(chef.png);
+    
     background-size: cover;
-    }
-    .container .box:hover{
-        background-position: bottom;
-    }
+    } */
+    /* .container .box:hover{
+        background-position: top;
+    } */
 }
