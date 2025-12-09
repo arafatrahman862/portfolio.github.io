@@ -1,43 +1,105 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/skills", label: "Skills" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const navOption = <>
-    <Link to="/"><a className='cursor-pointer' href="#home"> Home</a></Link>
-    <Link to="/about"><a className='cursor-pointer' href="#about"> About</a></Link>
-    <Link to="/skills"><a className='cursor-pointer' href="#skills"> Skills</a></Link>
-    <Link to="/projects"><a className='cursor-pointer' href="#projects"> Projects</a></Link>
-   <Link to='/contact'> <a className='cursor-pointer' href="#contact"> Contact</a></Link>
-    
-    
-    </>
+  const linkClasses = ({ isActive }) =>
+    `px-4 py-1.5 rounded-full transition-all duration-200 ${isActive
+      ? "bg-gradient-to-r from-violet-500 to-emerald-500 text-white shadow-lg shadow-violet-700/40"
+      : "text-gray-200 hover:text-white hover:bg-white/10"
+    }`;
 
-    
+  return (
+    <div className="w-full flex justify-center">
+      <nav
+        className="
+          mt-2 mb-4
+          max-w-3xl w-full
+          bg-white/10 backdrop-blur-md
+          border border-white/20
+          rounded-2xl lg:rounded-full
+          shadow-[0_0_25px_rgba(0,0,0,0.3)]
+          px-4 md:px-6 py-2 md:py-3
+        "
+      >
+        {/* TOP ROW */}
+        <div className="flex items-center justify-between lg:justify-center gap-4">
+          {/* Brand (only on mobile) */}
+          <span className="font-semibold tracking-[0.2em] text-violet-200 lg:hidden">
+            Arafat
+          </span>
 
-    return (
-        <div>
-            <div className="navbar md:w-[45%] w-1/4 bg-green-400 md:mx-auto rounded-full  font-semibold text-black  md:mb-6">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <label tabIndex={0} className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content md:mt-3 z-[1] p-2 shadow  rounded-box w-52">
-        {navOption}
-      </ul>
-    </div>
-    
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal -pl-10 space-x-20">
-      {navOption}
-    </ul>
-  </div>
+          {/* Desktop nav */}
+          <ul className="hidden lg:flex justify-center w-full gap-10 font-medium">
+            {links.map((link) => (
+              <NavLink key={link.to} to={link.to} className={linkClasses}>
+                {link.label}
+              </NavLink>
+            ))}
+          </ul>
 
-</div>
+          {/* Hamburger (mobile only) */}
+          <button
+            type="button"
+            className="lg:hidden p-2 rounded-full text-white hover:bg-white/10 transition"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle navigation menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
-    );
+
+        {/* MOBILE MENU (pushes content down, no overlap) */}
+        <div
+          className={`
+            lg:hidden overflow-hidden transition-[max-height,opacity] duration-300
+            ${isOpen ? "max-h-60 opacity-100 mt-2" : "max-h-0 opacity-0"}
+          `}
+        >
+          <ul className="flex flex-col gap-1 py-2">
+            {links.map((link) => (
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  className={({ isActive }) =>
+                    `block w-full text-left px-4 py-2 rounded-xl text-sm font-medium transition ${isActive
+                      ? "bg-violet-600 text-white"
+                      : "text-gray-200 hover:bg-white/10"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)} // close menu after navigation
+                >
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </div>
+  );
 };
 
 export default Navbar;
