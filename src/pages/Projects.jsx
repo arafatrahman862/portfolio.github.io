@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
 import yokuImg from "../assets/yoku.jpg";
-import toyImg from "../assets/toy.jpg";
+import toyImg from "../assets/Toy.png";
 import chefImg from "../assets/chef.jpg";
 import gourmetImg from "../assets/Gourmet.png";
 import ridexImg from "../assets/Ridex.png";
@@ -15,41 +15,85 @@ import bikeImg from "../assets/Bike.png";
 const projectsData = [
     {
         id: 1,
+        title: "RIDE-X",
+        name: "RIDE-X – Ride Management App",
+        description:
+            "Ride management application with booking, ride tracking, and role-based dashboards.",
+        category: "Fullstack",
+        image: ridexImg,
+        frontendTech: "React.js, TypeScript, Redux Toolkit, RTK Query, Tailwind CSS, ShadCN/ UI, React - Leaflet, Recharts, Zod, React Hook Form",
+        backendTech: "Node.js, Express.js, MongoDB, Mongoose, JWT, Passport.js, bcryptjs, Multer, Cloudinary, Nodemailer, PDFKit, SSLCommerz, zod",
+        frontendRepo: "https://github.com/arafatrahman862/Assingment6-Frontend",
+        backendRepo: "https://github.com/arafatrahman862/Assingment5",
+        live: "https://assingment6.vercel.app/",
+    },
+    {
+        id: 2,
+        title: "FLEXFLOW",
+        name: "FlexFlow – Task Management App",
+        description:
+            "Productivity and task management tool with lists, filters, and team-focused workflows.",
+        category: "Fullstack",
+        image: flexImg,
+        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase, Redux Toolkit, RTK Query, DaisyUI, React Swiper",
+        backendTech: "Node.js, Express.js, MongoDB, JWT",
+        frontendRepo: "https://github.com/flexflow0/flex-flow",
+        backendRepo: "https://github.com/flexflow0/flex-flow-server",
+        live: "https://flex-flow.web.app/",
+    },
+    ,
+    {
+        id: 3,
         title: "YOKU",
         name: "Yoku – Sports Equipment Store",
         description:
             "A full-stack sports equipment platform with product management, secure payments, and user dashboards.",
         category: "Fullstack",
         image: yokuImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Stripe.js",
-        backendTech: "Node.js, Express.js, MongoDB, Firebase",
+        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Stripe.js, DaisyUI, Firebase",
+        backendTech: "Node.js, Express.js, MongoDB, JWT",
         frontendRepo: "https://github.com/arafatrahman862/Yoku-Client",
         backendRepo: "https://github.com/arafatrahman862/Yoku-Server",
         live: "https://assignment12-34f50.web.app/",
     },
     {
-        id: 2,
+        id: 4,
         title: "TOY MARKETPLACE",
         name: "Toy Marketplace – MERN App",
         description:
             "A MERN stack toy marketplace where users can browse, filter, and manage toy listings with authentication.",
         category: "Fullstack",
         image: toyImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase",
+        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase, DaisyUI",
         backendTech: "Node.js, Express.js, MongoDB",
         frontendRepo: "https://github.com/arafatrahman862/Toy-Marketplace-Client",
         backendRepo: "https://github.com/arafatrahman862/Toy-Marketplace-Server",
         live: "https://assignment-11-6866e.web.app/",
     },
     {
-        id: 3,
+        id: 5,
+        title: "GOURMET RESTAURANT",
+        name: "Gourmet Restaurant – Fullstack",
+        description:
+            "A restaurant management and ordering platform with menu browsing, reservations, and admin features.",
+        category: "Fullstack",
+        image: gourmetImg,
+        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase, DaisyUI, React Hot Toast, React Query, Swiper, Axios, React Icons",
+        backendTech: "Node.js, Express.js, MongoDB, JWT",
+        frontendRepo: "https://github.com/arafatrahman862/Gourmet_Resturant",
+        backendRepo:
+            "https://github.com/arafatrahman862/Gourmet_Resturant_Server_Side",
+        live: "https://bistro-boss-2aa88.web.app/",
+    },
+    {
+        id: 6,
         title: "CHEF RECIPE HUNTER",
         name: "Chef Recipe Hunter – MERN App",
         description:
             "A recipe discovery website with chef profiles, recipe details, and user authentication with Firebase.",
         category: "Fullstack",
         image: chefImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase",
+        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase, DaisyUI",
         backendTech: "Node.js, Express.js, MongoDB",
         frontendRepo:
             "https://github.com/arafatrahman862/Chef-Recipe-Hunter-Client",
@@ -57,49 +101,8 @@ const projectsData = [
             "https://github.com/arafatrahman862/Chef-Recipe-Hunter-Server",
         live: "https://assingment10-6940a.web.app/",
     },
-    {
-        id: 4,
-        title: "GOURMET RESTAURANT",
-        name: "Gourmet Restaurant – Fullstack",
-        description:
-            "A restaurant management and ordering platform with menu browsing, reservations, and admin features.",
-        category: "Fullstack",
-        image: gourmetImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase",
-        backendTech: "Node.js, Express.js, MongoDB",
-        frontendRepo: "https://github.com/arafatrahman862/Gourmet_Resturant",
-        backendRepo:
-            "https://github.com/arafatrahman862/Gourmet_Resturant_Server_Side",
-        live: "https://bistro-boss-2aa88.web.app/",
-    },
-    {
-        id: 5,
-        title: "RIDE-X",
-        name: "RIDE-X – Ride Management App",
-        description:
-            "Ride management application with booking, ride tracking, and role-based dashboards.",
-        category: "Fullstack",
-        image: ridexImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase",
-        backendTech: "Node.js, Express.js, MongoDB",
-        frontendRepo: "https://github.com/arafatrahman862/Assingment6-Frontend",
-        backendRepo: "https://github.com/arafatrahman862/Assingment5",
-        live: "https://assingment6.vercel.app/",
-    },
-    {
-        id: 6,
-        title: "FLEXFLOW",
-        name: "FlexFlow – Task Management App",
-        description:
-            "Productivity and task management tool with lists, filters, and team-focused workflows.",
-        category: "Fullstack",
-        image: flexImg,
-        frontendTech: "ReactJS, React Router, JavaScript, Tailwind CSS, Firebase",
-        backendTech: "Node.js, Express.js, MongoDB",
-        frontendRepo: "https://github.com/flexflow0/flex-flow",
-        backendRepo: "https://github.com/flexflow0/flex-flow-server",
-        live: "https://flex-flow.web.app/",
-    },
+   
+    
     {
         id: 7,
         title: "TEA HOUSE",
