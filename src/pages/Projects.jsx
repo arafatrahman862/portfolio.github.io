@@ -11,6 +11,7 @@ import teaImg from "../assets/Tea.png";
 import aiImg from "../assets/Ai.png";
 import geoImg from "../assets/Geo.png";
 import bikeImg from "../assets/Bike.png";
+import EventImg from "../assets/EventImg.png";
 
 const projectsData = [
     {
@@ -29,6 +30,20 @@ const projectsData = [
     },
     {
         id: 2,
+        title: "EventSnap",
+        name: "EventSnap - Event Management App",
+        description:
+            "EventSnap is a user-centric event management platform built with Next.js and TypeScript, offering role-based dashboards for Admin, Host, and Client. It enables smart event discovery, seamless booking with SSLCommerz integration and automated revenue sharing, along with host onboarding, event tracking, reviews, analytics, and a responsive SEO-optimized interface enhanced by Cloudinary for media management.",
+        category: "Fullstack",
+        image: EventImg,
+        frontendTech: "Next.js, TypeScript, Tailwind CSS, ShadCN/UI, React Hook Form, Zod",
+        backendTech: "TypeScript, Node.js, Express, PostgreSQL + Prisma ORM, JWT, bcryptjs, SSLCommerz, Nodemailer",
+        frontendRepo: "https://github.com/arafatrahman862/Event-Snap-Frontend",
+        backendRepo: "https://github.com/arafatrahman862/Event-Snap-Backend",
+        live: "https://assingment-8-frontend.vercel.app/",
+    },
+    {
+        id: 3,
         title: "FLEXFLOW",
         name: "FlexFlow – Task Management App",
         description:
@@ -43,7 +58,7 @@ const projectsData = [
     },
     ,
     {
-        id: 3,
+        id: 4,
         title: "YOKU",
         name: "Yoku – Sports Equipment Store",
         description:
@@ -57,7 +72,7 @@ const projectsData = [
         live: "https://assignment12-34f50.web.app/",
     },
     {
-        id: 4,
+        id: 5,
         title: "TOY MARKETPLACE",
         name: "Toy Marketplace – MERN App",
         description:
@@ -71,7 +86,7 @@ const projectsData = [
         live: "https://assignment-11-6866e.web.app/",
     },
     {
-        id: 5,
+        id: 6,
         title: "GOURMET RESTAURANT",
         name: "Gourmet Restaurant – Fullstack",
         description:
@@ -86,7 +101,7 @@ const projectsData = [
         live: "https://bistro-boss-2aa88.web.app/",
     },
     {
-        id: 6,
+        id: 7,
         title: "CHEF RECIPE HUNTER",
         name: "Chef Recipe Hunter – MERN App",
         description:
@@ -101,10 +116,10 @@ const projectsData = [
             "https://github.com/arafatrahman862/Chef-Recipe-Hunter-Server",
         live: "https://assingment10-6940a.web.app/",
     },
-   
-    
+
+
     {
-        id: 7,
+        id: 8,
         title: "TEA HOUSE",
         name: "Tea House – Landing Page",
         description:
@@ -118,7 +133,7 @@ const projectsData = [
         live: "https://65357cca57ebb925779f6ef9--capable-macaron-a164ea.netlify.app/",
     },
     {
-        id: 8,
+        id: 9,
         title: "AI UNIVERSE",
         name: "AI Universe – Tools Showcase",
         description:
@@ -132,7 +147,7 @@ const projectsData = [
         live: "https://65357a7cf393d270c7877184--quiet-figolla-98a391.netlify.app/",
     },
     {
-        id: 9,
+        id: 10,
         title: "GEOMETRY GENIUS",
         name: "Geometry Genius – Geometry Toolkit",
         description:
@@ -146,7 +161,7 @@ const projectsData = [
         live: "https://653579db8b4dfd20c851f548--stellular-frangipane-caab72.netlify.app/",
     },
     {
-        id: 10,
+        id: 11,
         title: "BIKERZZ-ZONE",
         name: "Bikerzz Zone – Bike Store",
         description:
@@ -259,8 +274,8 @@ const Projects = () => {
                                             </span>
                                             <span
                                                 className={`inline-flex items-center rounded-full px-3 py-1 text-[11px] font-medium ${project.category === "Fullstack"
-                                                        ? "bg-emerald-500/15 text-emerald-200"
-                                                        : "bg-violet-600/20 text-violet-200"
+                                                    ? "bg-emerald-500/15 text-emerald-200"
+                                                    : "bg-violet-600/20 text-violet-200"
                                                     }`}
                                             >
                                                 {project.category}

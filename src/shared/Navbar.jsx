@@ -31,14 +31,14 @@ const Navbar = () => {
           px-4 md:px-6 py-2 md:py-3
         "
       >
-        {/* TOP ROW */}
+ 
         <div className="flex items-center justify-between lg:justify-center gap-4">
-          {/* Brand (only on mobile) */}
+      
           <span className="font-semibold tracking-[0.2em] text-violet-200 lg:hidden">
             Arafat
           </span>
 
-          {/* Desktop nav */}
+      
           <ul className="hidden lg:flex justify-center w-full gap-10 font-medium">
             {links.map((link) => (
               <NavLink key={link.to} to={link.to} className={linkClasses}>
@@ -47,7 +47,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Hamburger (mobile only) */}
+       
           <button
             type="button"
             className="lg:hidden p-2 rounded-full text-white hover:bg-white/10 transition"
@@ -71,7 +71,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* MOBILE MENU (pushes content down, no overlap) */}
+     
         <div
           className={`
             lg:hidden overflow-hidden transition-[max-height,opacity] duration-300
@@ -89,7 +89,7 @@ const Navbar = () => {
                       : "text-gray-200 hover:bg-white/10"
                     }`
                   }
-                  onClick={() => setIsOpen(false)} // close menu after navigation
+                  onClick={() => setIsOpen(false)} 
                 >
                   {link.label}
                 </NavLink>

@@ -85,7 +85,7 @@ const Skills = () => {
                         return (
                             <div key={idx} className="relative group flex items-center justify-center">
 
-                                {/* Level Badge — appears ONLY on hover */}
+                               
                                 {level && (
                                     <span
                                         className={`
